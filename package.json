@@ -6,7 +6,7 @@
   "scripts": {
     "fable": "fable",
     "webpack": "webpack",
-    "serve": "http-server ./public",
+    "serve": "http-server ./out",
     "release": "fable & webpack -p"
   },
   "author": "Playground",

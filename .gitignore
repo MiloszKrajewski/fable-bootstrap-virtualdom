@@ -1,8 +1,5 @@
 *.log
 *.bak
 node_modules/
-
-src/bin/
-src/obj/
 build/
-public/bundled/
+out/

@@ -3,9 +3,9 @@ var webpack = require("webpack");
 
 var cfg = {
     devtool: "source-map",
-    entry: ['./src/app.js'],
+    entry: ['./src/index.js'],
     output: {
-        path: path.resolve("./public/bundled"),
+        path: path.resolve("./out"),
         filename: "bundle.js"
     },
     module: {
@@ -37,8 +37,8 @@ var cfg = {
         extensions: ['', '.ts', '.js', '.jsx'],
         root: [
             path.resolve('.'),
-            path.resolve('./src'),
-            path.resolve('./build/fsx'),
+            path.resolve('./src/js'),
+            path.resolve('./build/fs'),
         ]
     }
 };

@@ -30,7 +30,7 @@ def pause():
 
 fable = spawn(".\\node_modules\\.bin\\fable -w", "Fable").pid
 webpack = spawn(".\\node_modules\\.bin\\webpack --watch", "Webpack").pid
-server = spawn(".\\node_modules\\.bin\\http-server ./public", "Server").pid
+server = spawn(".\\node_modules\\.bin\\http-server ./out", "Server").pid
 
 wait(5)
 pause()

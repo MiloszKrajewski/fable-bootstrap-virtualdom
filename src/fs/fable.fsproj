@@ -2,12 +2,12 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>a5967363-4df0-4673-8dae-a2ed50e5cf3f</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>x</RootNamespace>
+    <RootNamespace>Playground</RootNamespace>
     <AssemblyName>Playground</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
@@ -18,19 +18,21 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <Tailcalls>false</Tailcalls>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>..\..\build\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\build\obj\$(Configuration)\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\Playground.xml</DocumentationFile>
+    <DocumentationFile>fable.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <Tailcalls>true</Tailcalls>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\build\bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>..\..\build\obj\$(Configuration)\</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\Playground.xml</DocumentationFile>
+    <DocumentationFile>fable.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -38,13 +40,11 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-    <Reference Include="Fable.Core">
-      <HintPath>..\node_modules\fable-core\Fable.Core.dll</HintPath>
-    </Reference>
+    <Reference Include="../../node_modules/fable-core/Fable.Core.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="../node_modules/fable-import-virtualdom/Fable.Helpers.Virtualdom.fs" />
-    <Compile Include="../node_modules/fable-import-virtualdom/Fable.Helpers.RouteParser.fs" />
+    <Compile Include="../../node_modules/fable-import-virtualdom/Fable.Helpers.Virtualdom.fs" />
+    <Compile Include="../../node_modules/fable-import-virtualdom/Fable.Helpers.RouteParser.fs" />
     <Compile Include="Js.fs" />
     <Compile Include="Module.fs" />
     <Compile Include="Main.fs" />
