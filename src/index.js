@@ -1,4 +1,5 @@
 require("babel-polyfill");
+require("whatwg-fetch");
 require("bootstrap-webpack");
 
 require("file?name=index.html!./html/index.html");

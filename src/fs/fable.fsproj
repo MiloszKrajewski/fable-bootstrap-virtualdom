@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="../../node_modules/fable-import-virtualdom/Fable.Helpers.Virtualdom.fs" />
     <Compile Include="../../node_modules/fable-import-virtualdom/Fable.Helpers.RouteParser.fs" />
+    <Compile Include="../../node_modules/fable-import-fetch/Fable.Import.Fetch.fs" />
+    <Compile Include="../../node_modules/fable-import-fetch/Fable.Helpers.Fetch.fs" />
     <Compile Include="Js.fs" />
     <Compile Include="Main.fs" />
   </ItemGroup>
