@@ -31,7 +31,7 @@ var cfg = {
         ]
     },
     plugins: [ 
-        new webpack.ProvidePlugin({ "$": "jquery", "jQuery": "jquery" }) 
+        new webpack.ProvidePlugin({ "$": "jquery", "jQuery": "jquery" })
     ],
     resolve: {
         extensions: ['', '.ts', '.js', '.jsx'],
